@@ -1,0 +1,45 @@
+.mybookings-page { padding: 90px 0 60px; min-height: 100vh; }
+.page-header { margin-bottom: 32px; }
+
+.bookings-list { display: flex; flex-direction: column; gap: 16px; }
+
+.booking-card-item { padding: 24px; }
+
+.booking-vehicle-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.bv-icon {
+  font-size: 2rem;
+  width: 52px; height: 52px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.bv-name { font-weight: 700; font-family: 'Syne', sans-serif; font-size: 1.05rem; }
+.bv-num { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+.ml-auto { margin-left: auto; }
+
+.booking-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.bd-item { display: flex; flex-direction: column; gap: 4px; }
+.bd-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.bd-val { font-size: 0.9rem; font-weight: 500; color: var(--text-primary); }
+
+.booking-actions { margin-top: 16px; display: flex; gap: 8px; justify-content: flex-end; }
+
+@media (max-width: 768px) {
+  .booking-details-grid { grid-template-columns: repeat(2, 1fr); }
+}

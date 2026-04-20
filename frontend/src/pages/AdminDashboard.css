@@ -1,0 +1,131 @@
+.admin-page { padding: 90px 0 60px; min-height: 100vh; }
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 100px;
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card::before {
+  background: var(--accent-color, var(--accent));
+}
+
+/* Fleet Breakdown */
+.type-breakdown {
+  margin-bottom: 28px;
+  padding: 24px;
+}
+
+.type-bars { display: flex; flex-direction: column; gap: 12px; }
+
+.type-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.type-bar-item > span:first-child { min-width: 120px; color: var(--text-secondary); }
+
+.bar-track {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.bar-count { min-width: 30px; text-align: right; color: var(--accent); font-weight: 700; }
+
+/* Pending vehicles grid */
+.pending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pending-card { padding: 0; overflow: hidden; }
+
+.pending-img-wrap {
+  position: relative;
+  height: 180px;
+  background: var(--bg-secondary);
+}
+
+.pending-img { width: 100%; height: 100%; object-fit: cover; }
+.pending-img-ph {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3.5rem;
+}
+
+.pending-info { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.pending-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; }
+.pending-meta { font-size: 0.82rem; color: var(--text-muted); }
+
+.pending-pricing {
+  display: flex;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 8px 10px;
+  background: var(--accent-dim);
+  border-radius: 8px;
+}
+
+.pending-owner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.po-avatar {
+  width: 32px; height: 32px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700; font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.pending-actions { display: flex; gap: 8px; margin-top: 4px; }
+
+@media (max-width: 1100px) { .analytics-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px) {
+  .analytics-grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
